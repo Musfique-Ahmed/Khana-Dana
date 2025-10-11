@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khana Dana - Homemade Bengali Snacks</title>
+    <meta name="description" content="Khana Dana — Homemade Bengali snacks, frozen fresh and ready to fry. Order samucha, shingara, rolls and more. Delivery in Dhaka.">
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Khana Dana - Homemade Bengali Snacks">
+    <meta property="og:description" content="Homemade Bengali snacks, frozen fresh and ready to fry. Order now!">
+    <meta property="og:image" content="https://musfique-ahmed.github.io/Khana-Dana/Contents/cover.png">
+    <meta property="og:type" content="website">
     <!-- Favicon and touch icons: use the repo logo so the browser shows your brand -->
     <link rel="icon" type="image/png" href="Contents/logo.png">
     <link rel="apple-touch-icon" href="Contents/logo.png">
@@ -17,17 +23,33 @@
             font-family: 'Inter', sans-serif;
             background-color: #FFF9F0; /* Light cream background */
             color: #4A2E1A; /* Dark brown text */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .bg-hero {
             background-image: url('Contents/cover.png');
             background-size: cover;
             background-position: center;
+            position: relative;
         }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.25) 100%);
+            display: block;
+            z-index: 0;
+        }
+        .hero-content { position: relative; z-index: 5; }
         .bg-warm {
             background-color: #F7B733; /* Warm yellow/orange from logo */
         }
         .text-brand {
             color: #D35400; /* Orange/brown from logo */
+        }
+        /* small card hover effect */
+        .product-card:hover { transform: translateY(-6px) scale(1.01); }
+        @media (max-width: 640px) {
+            .text-4xl { font-size: 1.85rem; }
         }
     </style>
 </head>
@@ -35,20 +57,23 @@
 
     <!-- Header & Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <img src="Contents/logo.png" alt="Khana Dana Logo" class="h-14 w-14 rounded-2xl">
-                <span class="text-2xl font-bold text-brand">Khana Dana</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Home</a>
-                <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">About Us</a>
-                <a href="#products" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Products</a>
-                <a href="#how-it-works" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">How It Works</a>
-                <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Contact</a>
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="Contents/logo.png" alt="Khana Dana Logo" class="h-12 w-12 rounded-2xl border-2 border-orange-200 shadow-sm">
+                    <div class="leading-tight">
+                        <div class="text-xl font-bold text-brand">Khana Dana</div>
+                        <div class="text-sm text-gray-500">Homemade • Frozen • Ready to Fry</div>
+                    </div>
+                </a>
             </div>
-            <a href="#products" class="hidden md:inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-orange-600 hover:bg-orange-700 shadow-lg hover:scale-105">Order Now</a>
-             <!-- Mobile Menu Button -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">About</a>
+                <a href="#products" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Products</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Contact</a>
+                <a href="#products" class="inline-block px-5 py-2 rounded-lg text-white font-semibold bg-gradient-to-br from-orange-500 to-orange-700 shadow-md hover:from-orange-600 hover:to-orange-800 transition-all">Order Now</a>
+            </div>
             <button id="mobile-menu-button" class="md:hidden text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
@@ -66,19 +91,18 @@
 
     <main>
         <!-- Homepage Section -->
-        <section id="home" class="bg-hero text-white min-h-[80vh] flex items-center">
-            <div class="bg-black bg-opacity-50 w-full h-full min-h-[80vh] flex items-center">
-                <div class="container mx-auto px-6 text-center">
-                    <img src="Contents/logo.png" alt="Khana Dana Logo" class="h-28 w-28 rounded-2xl mx-auto mb-4 border-4 border-white shadow-lg">
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Homemade Bengali Snacks — Frozen Fresh, Ready to Fry!</h1>
-                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                        Enjoy the authentic taste of Bengal, anytime, anywhere. Khana Dana brings you a range of homemade frozen snacks like samucha, shingara, rolls, and puri — made with love and delivered frozen fresh to your doorstep.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#products" class="text-lg inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-orange-600 hover:bg-orange-700 shadow-lg hover:scale-105">👉 Order Now</a>
-                        <a href="#products" class="text-lg inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-gray-700 hover:bg-gray-800 hover:scale-105">🛒 View Menu</a>
-                        <a href="#contact" class="text-lg inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-gray-700 hover:bg-gray-800 hover:scale-105">📦 Wholesale Inquiry</a>
-                    </div>
+        <section id="home" class="bg-hero text-white min-h-[80vh] flex items-center relative">
+            <span class="hero-overlay" aria-hidden="true"></span>
+            <div class="container mx-auto px-6 text-center hero-content py-24">
+                <img src="Contents/logo.png" alt="Khana Dana Logo" class="h-28 w-28 rounded-2xl mx-auto mb-4 border-4 border-white shadow-lg">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">Homemade Bengali Snacks — Frozen Fresh, Ready to Fry!</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-100/90">
+                    Enjoy the authentic taste of Bengal, anytime, anywhere. Khana Dana brings you a range of homemade frozen snacks like samucha, shingara, rolls, and puri — made with love and delivered frozen fresh to your doorstep.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="text-lg inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-gradient-to-br from-orange-500 to-orange-700 shadow-lg hover:scale-105">👉 Order Now</a>
+                    <a href="#products" class="text-lg inline-block px-6 py-3 rounded-lg text-orange-700 font-semibold bg-white/10 hover:bg-white/20 transition-all">🛒 View Menu</a>
+                    <a href="#contact" class="text-lg inline-block px-6 py-3 rounded-lg text-orange-700 font-semibold bg-white/10 hover:bg-white/20 transition-all">📦 Wholesale Inquiry</a>
                 </div>
             </div>
         </section>
@@ -115,25 +139,25 @@
                 <!--<p class="text-lg text-center text-gray-600 mb-12">Our Signature Items</p>-->
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Product Card 1 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center product-card">
                         <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Samucha" class="w-full h-40 object-cover rounded-lg mb-4" alt="Samucha">
                         <h3 class="text-xl font-bold mb-2">🥟 Samucha</h3>
                         <p>Crispy on the outside, spicy inside.</p>
                     </div>
                     <!-- Product Card 2 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center product-card">
                         <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Shingara" class="w-full h-40 object-cover rounded-lg mb-4" alt="Shingara">
                         <h3 class="text-xl font-bold mb-2">🥔 Shingara</h3>
                         <p>Classic Bengali favorite filled with potato and spices.</p>
                     </div>
                     <!-- Product Card 3 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center product-card">
                         <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Chicken+Roll" class="w-full h-40 object-cover rounded-lg mb-4" alt="Chicken Roll">
                         <h3 class="text-xl font-bold mb-2">🌯 Chicken Roll</h3>
                         <p>Juicy chicken wrapped in soft, flaky paratha.</p>
                     </div>
                      <!-- Product Card 4 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center product-card">
                         <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Puri" class="w-full h-40 object-cover rounded-lg mb-4" alt="Puri">
                         <h3 class="text-xl font-bold mb-2">🍞 Puri</h3>
                         <p>Light, golden, and perfect with anything!</p>
