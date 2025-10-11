@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Dana - Homemade Bengali Snacks</title>
+    <!-- Favicon and touch icons: use the repo logo so the browser shows your brand -->
+    <link rel="icon" type="image/png" href="Contents/logo.png">
+    <link rel="apple-touch-icon" href="Contents/logo.png">
+    <meta name="theme-color" content="#D35400">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Base styles that do not use @apply */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFF9F0; /* Light cream background */
+            color: #4A2E1A; /* Dark brown text */
+        }
+        .bg-hero {
+            background-image: url('Contents/cover.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-warm {
+            background-color: #F7B733; /* Warm yellow/orange from logo */
+        }
+        .text-brand {
+            color: #D35400; /* Orange/brown from logo */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="Contents/logo.png" alt="Khana Dana Logo" class="h-14 w-14 rounded-2xl">
+                <span class="text-2xl font-bold text-brand">Khana Dana</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">About Us</a>
+                <a href="#products" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Products</a>
+                <a href="#how-it-works" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">How It Works</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Contact</a>
+            </div>
+            <a href="#products" class="hidden md:inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-orange-600 hover:bg-orange-700 shadow-lg hover:scale-105">Order Now</a>
+             <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors text-center">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors text-center">About Us</a>
+            <a href="#products" class="block py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors text-center">Products</a>
+            <a href="#how-it-works" class="block py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors text-center">How It Works</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors text-center">Contact</a>
+            <a href="#products" class="block mt-2 text-center w-full inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-orange-600 hover:bg-orange-700 shadow-lg hover:scale-105">Order Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Homepage Section -->
+        <section id="home" class="bg-hero text-white min-h-[80vh] flex items-center">
+            <div class="bg-black bg-opacity-50 w-full h-full min-h-[80vh] flex items-center">
+                <div class="container mx-auto px-6 text-center">
+                    <img src="Contents/logo.png" alt="Khana Dana Logo" class="h-28 w-28 rounded-2xl mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Homemade Bengali Snacks — Frozen Fresh, Ready to Fry!</h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                        Enjoy the authentic taste of Bengal, anytime, anywhere. Khana Dana brings you a range of homemade frozen snacks like samucha, shingara, rolls, and puri — made with love and delivered frozen fresh to your doorstep.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#products" class="text-lg inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-orange-600 hover:bg-orange-700 shadow-lg hover:scale-105">👉 Order Now</a>
+                        <a href="#products" class="text-lg inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-gray-700 hover:bg-gray-800 hover:scale-105">🛒 View Menu</a>
+                        <a href="#contact" class="text-lg inline-block px-6 py-3 rounded-lg text-white font-semibold transition-transform duration-300 bg-gray-700 hover:bg-gray-800 hover:scale-105">📦 Wholesale Inquiry</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-brand">🍴 About Us</h2>
+                <p class="text-lg text-center text-gray-600 mb-12">Who We Are</p>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-lg leading-relaxed">At Khana Dana, we believe that the best food is made at home. Our snacks are prepared by skilled home chefs using fresh ingredients and traditional Bengali recipes — ensuring every bite brings you warmth, comfort, and nostalgia.</p>
+                         <h3 class="text-2xl font-semibold text-brand">Our Promise:</h3>
+                         <ul class="space-y-3">
+                             <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 100% Homemade</li>
+                             <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Hygienically Prepared</li>
+                             <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Frozen Fresh for Maximum Taste</li>
+                             <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Ready to Fry in Minutes</li>
+                         </ul>
+                    </div>
+                     <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                         <h3 class="text-2xl font-semibold text-brand mb-4">Our Story:</h3>
+                         <p class="leading-relaxed">Founded with love for Bengali street snacks, Khana Dana started as a small kitchen idea and grew into an online brand serving delicious, homemade frozen snacks that you can enjoy without the hassle of preparation.</p>
+                         <img src="https://placehold.co/400x300/FDEBD0/4A2E1A?text=Our+Kitchen" alt="Our Kitchen" class="mt-6 rounded-lg shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-orange-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-brand">🥟 Our Products</h2>
+                <!--<p class="text-lg text-center text-gray-600 mb-12">Our Signature Items</p>-->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Samucha" class="w-full h-40 object-cover rounded-lg mb-4" alt="Samucha">
+                        <h3 class="text-xl font-bold mb-2">🥟 Samucha</h3>
+                        <p>Crispy on the outside, spicy inside.</p>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Shingara" class="w-full h-40 object-cover rounded-lg mb-4" alt="Shingara">
+                        <h3 class="text-xl font-bold mb-2">🥔 Shingara</h3>
+                        <p>Classic Bengali favorite filled with potato and spices.</p>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Chicken+Roll" class="w-full h-40 object-cover rounded-lg mb-4" alt="Chicken Roll">
+                        <h3 class="text-xl font-bold mb-2">🌯 Chicken Roll</h3>
+                        <p>Juicy chicken wrapped in soft, flaky paratha.</p>
+                    </div>
+                     <!-- Product Card 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <img src="https://placehold.co/300x200/FAD7A0/4A2E1A?text=Puri" class="w-full h-40 object-cover rounded-lg mb-4" alt="Puri">
+                        <h3 class="text-xl font-bold mb-2">🍞 Puri</h3>
+                        <p>Light, golden, and perfect with anything!</p>
+                    </div>
+                </div>
+                <!-- Pricing -->
+                <div class="text-center mt-16">
+                     <h3 class="text-2xl font-bold text-brand mb-6">Pricing</h3>
+                     <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full md:w-1/3">
+                             <p class="text-2xl font-bold">10 pcs</p>
+                             <p class="text-4xl font-extrabold text-brand my-2">200 BDT</p>
+                         </div>
+                         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full md:w-1/3">
+                             <p class="text-2xl font-bold">20 pcs + 1 pc FREE!</p>
+                             <p class="text-4xl font-extrabold text-brand my-2">400 BDT</p>
+                         </div>
+                     </div>
+                     <div class="mt-12 bg-green-100 text-green-800 p-6 rounded-2xl inline-block shadow-lg border-2 border-green-300 animate-pulse">
+                         <h4 class="text-3xl font-extrabold">🎉 Opening Week Offer! 🎉</h4>
+                         <p class="text-xl mt-2">Get 10 pcs at just <span class="font-bold text-4xl">150 BDT!</span></p>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-brand">🚚 How It Works</h2>
+                <div class="grid md:grid-cols-3 gap-8 mt-12 text-center">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl mb-4"><i class="fas fa-utensils"></i></div>
+                        <h3 class="text-xl font-bold mb-2">🧑‍🍳 We Prepare</h3>
+                        <p>Homemade snacks freshly made in small batches.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl mb-4"><i class="fas fa-snowflake"></i></div>
+                        <h3 class="text-xl font-bold mb-2">❄️ We Freeze</h3>
+                        <p>Locked in freshness with quick-freeze technology.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center">
+                         <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl mb-4"><i class="fas fa-box-open"></i></div>
+                        <h3 class="text-xl font-bold mb-2">📦 We Deliver</h3>
+                        <p>Frozen snacks sent right to your door.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                     <h3 class="text-2xl font-bold text-brand">🔥 You Fry & Enjoy: Crispy, hot, and ready in minutes!</h3>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-orange-50">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-brand">💬 Customer Testimonials</h2>
+                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+                     <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 italic">
+                         <p class="text-lg">“The best shingara I’ve had outside my mom’s kitchen!”</p>
+                         <p class="text-right font-bold mt-4 text-brand">- Rafi, Dhaka</p>
+                     </div>
+                     <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 italic">
+                         <p class="text-lg">“Came frozen, fried in 5 minutes, and tasted amazing!”</p>
+                         <p class="text-right font-bold mt-4 text-brand">- Tania, Mirpur</p>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="py-20">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-brand">📞 Contact Us</h2>
+                 <p class="text-lg text-center text-gray-600 mb-12">We'd love to hear from you!</p>
+                 <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 max-w-2xl mx-auto">
+                     <div class="space-y-6">
+                         <p class="text-xl flex items-center justify-center"><i class="fas fa-phone mr-2 text-brand"></i><span class="mx-2">/</span><i class="fab fa-whatsapp mr-3 text-green-500"></i> 01540190091</p>
+                         <p class="text-xl"><i class="fas fa-envelope mr-3 text-brand"></i> contact@khanadana.com</p>
+                         <p class="text-xl"><i class="fas fa-map-marker-alt mr-3 text-brand"></i> Dhaka, Bangladesh</p>
+                     </div>
+                     <div class="mt-8">
+                         <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+                         <div class="flex justify-center space-x-6 text-3xl">
+                             <a href="https://www.facebook.com/profile.php?id=61571936078412" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:scale-125 transition-transform"><i class="fab fa-facebook-square"></i></a>
+                            <!-- <a href="#" class="text-pink-500 hover:scale-125 transition-transform"><i class="fab fa-instagram-square"></i></a> -->
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Khana Dana | Homemade • Frozen • Ready to Fry</p>
+            <p class="mt-2 text-lg font-semibold text-warm">Taste Home, Anytime!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
